@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,9 @@
     /* ============================================
        CSS RESET
        ============================================ */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -127,20 +130,10 @@
     }
 
     @keyframes particle-float {
-      0% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh);
-        opacity: 0;
-      }
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-110vh); opacity: 0; }
     }
 
     .particles__dot {
@@ -152,34 +145,32 @@
       animation: particle-float linear infinite;
     }
 
-    /* Color rotation via modular nth-child */
     .particles__dot:nth-child(5n+1) { background-color: var(--particle-1); }
     .particles__dot:nth-child(5n+2) { background-color: var(--particle-2); }
     .particles__dot:nth-child(5n+3) { background-color: var(--particle-3); }
     .particles__dot:nth-child(5n+4) { background-color: var(--particle-4); }
     .particles__dot:nth-child(5n+5) { background-color: var(--particle-5); }
 
-    /* Particle variations — position, size, speed, delay */
-    .particles__dot:nth-child(1)  { left:  3%; width: 6px;  height: 6px;  animation-duration: 7s;  animation-delay: 0s;   opacity: 0.7; }
-    .particles__dot:nth-child(2)  { left:  8%; width: 4px;  height: 4px;  animation-duration: 9s;  animation-delay: 1s;   opacity: 0.5; }
-    .particles__dot:nth-child(3)  { left: 14%; width: 8px;  height: 8px;  animation-duration: 11s; animation-delay: 0.5s; opacity: 0.6; }
-    .particles__dot:nth-child(4)  { left: 20%; width: 3px;  height: 3px;  animation-duration: 8s;  animation-delay: 3s;   opacity: 0.4; }
-    .particles__dot:nth-child(5)  { left: 26%; width: 5px;  height: 5px;  animation-duration: 10s; animation-delay: 2s;   opacity: 0.8; }
-    .particles__dot:nth-child(6)  { left: 32%; width: 7px;  height: 7px;  animation-duration: 12s; animation-delay: 4s;   opacity: 0.5; }
-    .particles__dot:nth-child(7)  { left: 37%; width: 4px;  height: 4px;  animation-duration: 7.5s;animation-delay: 1.5s; opacity: 0.6; }
-    .particles__dot:nth-child(8)  { left: 43%; width: 6px;  height: 6px;  animation-duration: 9.5s;animation-delay: 0.8s; opacity: 0.7; }
-    .particles__dot:nth-child(9)  { left: 50%; width: 3px;  height: 3px;  animation-duration: 11s; animation-delay: 3.5s; opacity: 0.4; }
-    .particles__dot:nth-child(10) { left: 55%; width: 8px;  height: 8px;  animation-duration: 8.5s;animation-delay: 2.5s; opacity: 0.6; }
-    .particles__dot:nth-child(11) { left: 60%; width: 5px;  height: 5px;  animation-duration: 10s; animation-delay: 1.2s; opacity: 0.5; }
-    .particles__dot:nth-child(12) { left: 65%; width: 4px;  height: 4px;  animation-duration: 13s; animation-delay: 4.5s; opacity: 0.7; }
-    .particles__dot:nth-child(13) { left: 70%; width: 7px;  height: 7px;  animation-duration: 7.8s;animation-delay: 0.3s; opacity: 0.5; }
-    .particles__dot:nth-child(14) { left: 75%; width: 3px;  height: 3px;  animation-duration: 9s;  animation-delay: 2.8s; opacity: 0.6; }
-    .particles__dot:nth-child(15) { left: 80%; width: 6px;  height: 6px;  animation-duration: 11.5s;animation-delay: 1.8s; opacity: 0.4; }
-    .particles__dot:nth-child(16) { left: 85%; width: 5px;  height: 5px;  animation-duration: 8s;  animation-delay: 3.2s; opacity: 0.8; }
-    .particles__dot:nth-child(17) { left: 89%; width: 4px;  height: 4px;  animation-duration: 10.5s;animation-delay: 0.7s; opacity: 0.5; }
-    .particles__dot:nth-child(18) { left: 93%; width: 7px;  height: 7px;  animation-duration: 12s; animation-delay: 2.2s; opacity: 0.6; }
-    .particles__dot:nth-child(19) { left: 96%; width: 3px;  height: 3px;  animation-duration: 9.2s;animation-delay: 4s;   opacity: 0.7; }
-    .particles__dot:nth-child(20) { left: 48%; width: 5px;  height: 5px;  animation-duration: 8.8s;animation-delay: 1.4s; opacity: 0.5; }
+    .particles__dot:nth-child(1) { left: 3%; width: 6px; height: 6px; animation-duration: 7s; animation-delay: 0s; opacity: 0.7; }
+    .particles__dot:nth-child(2) { left: 8%; width: 4px; height: 4px; animation-duration: 9s; animation-delay: 1s; opacity: 0.5; }
+    .particles__dot:nth-child(3) { left: 14%; width: 8px; height: 8px; animation-duration: 11s; animation-delay: 0.5s; opacity: 0.6; }
+    .particles__dot:nth-child(4) { left: 20%; width: 3px; height: 3px; animation-duration: 8s; animation-delay: 3s; opacity: 0.4; }
+    .particles__dot:nth-child(5) { left: 26%; width: 5px; height: 5px; animation-duration: 10s; animation-delay: 2s; opacity: 0.8; }
+    .particles__dot:nth-child(6) { left: 32%; width: 7px; height: 7px; animation-duration: 12s; animation-delay: 4s; opacity: 0.5; }
+    .particles__dot:nth-child(7) { left: 37%; width: 4px; height: 4px; animation-duration: 7.5s; animation-delay: 1.5s; opacity: 0.6; }
+    .particles__dot:nth-child(8) { left: 43%; width: 6px; height: 6px; animation-duration: 9.5s; animation-delay: 0.8s; opacity: 0.7; }
+    .particles__dot:nth-child(9) { left: 50%; width: 3px; height: 3px; animation-duration: 11s; animation-delay: 3.5s; opacity: 0.4; }
+    .particles__dot:nth-child(10) { left: 55%; width: 8px; height: 8px; animation-duration: 8.5s; animation-delay: 2.5s; opacity: 0.6; }
+    .particles__dot:nth-child(11) { left: 60%; width: 5px; height: 5px; animation-duration: 10s; animation-delay: 1.2s; opacity: 0.5; }
+    .particles__dot:nth-child(12) { left: 65%; width: 4px; height: 4px; animation-duration: 13s; animation-delay: 4.5s; opacity: 0.7; }
+    .particles__dot:nth-child(13) { left: 70%; width: 7px; height: 7px; animation-duration: 7.8s; animation-delay: 0.3s; opacity: 0.5; }
+    .particles__dot:nth-child(14) { left: 75%; width: 3px; height: 3px; animation-duration: 9s; animation-delay: 2.8s; opacity: 0.6; }
+    .particles__dot:nth-child(15) { left: 80%; width: 6px; height: 6px; animation-duration: 11.5s; animation-delay: 1.8s; opacity: 0.4; }
+    .particles__dot:nth-child(16) { left: 85%; width: 5px; height: 5px; animation-duration: 8s; animation-delay: 3.2s; opacity: 0.8; }
+    .particles__dot:nth-child(17) { left: 89%; width: 4px; height: 4px; animation-duration: 10.5s; animation-delay: 0.7s; opacity: 0.5; }
+    .particles__dot:nth-child(18) { left: 93%; width: 7px; height: 7px; animation-duration: 12s; animation-delay: 2.2s; opacity: 0.6; }
+    .particles__dot:nth-child(19) { left: 96%; width: 3px; height: 3px; animation-duration: 9.2s; animation-delay: 4s; opacity: 0.7; }
+    .particles__dot:nth-child(20) { left: 48%; width: 5px; height: 5px; animation-duration: 8.8s; animation-delay: 1.4s; opacity: 0.5; }
 
     /* ============================================
        GAME LAYOUT
@@ -197,9 +188,7 @@
     }
 
     /* --- Header --- */
-    .game__header {
-      text-align: center;
-    }
+    .game__header { text-align: center; }
 
     .game__title {
       font-size: var(--font-size-2xl);
@@ -232,6 +221,25 @@
       letter-spacing: 0.05em;
     }
 
+    .btn-info {
+      display: inline-block;
+      margin-left: var(--space-sm);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-primary);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--transition-fast);
+    }
+    
+    .btn-info:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
     /* --- Score Bar --- */
     .score-bar {
       display: flex;
@@ -239,9 +247,7 @@
       gap: var(--space-2xl);
     }
 
-    .score-bar__item {
-      text-align: center;
-    }
+    .score-bar__item { text-align: center; }
 
     .score-bar__label {
       font-size: var(--font-size-xs);
@@ -266,7 +272,6 @@
       width: 100%;
     }
 
-    /* --- Card (Glassmorphism) --- */
     .card {
       background: var(--color-surface);
       backdrop-filter: blur(16px);
@@ -279,25 +284,11 @@
       transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card--player {
-      border-color: rgba(99, 102, 241, 0.25);
-    }
-
-    .card--player:hover {
-      box-shadow: var(--shadow-glow-indigo);
-    }
-
-    .card--enemy {
-      border-color: rgba(236, 72, 153, 0.25);
-    }
-
-    .card--enemy:hover {
-      box-shadow: var(--shadow-glow-pink);
-    }
+    .card:hover { transform: translateY(-4px); }
+    .card--player { border-color: rgba(99, 102, 241, 0.25); }
+    .card--player:hover { box-shadow: var(--shadow-glow-indigo); }
+    .card--enemy { border-color: rgba(236, 72, 153, 0.25); }
+    .card--enemy:hover { box-shadow: var(--shadow-glow-pink); }
 
     .card__label {
       font-size: var(--font-size-sm);
@@ -317,113 +308,83 @@
       transition: color var(--transition-fast);
     }
 
-    .card--player .card__number {
-      color: var(--color-accent-indigo);
-    }
-
-    .card--enemy .card__number {
-      color: var(--color-accent-pink);
-    }
+    .card--player .card__number { color: var(--color-accent-indigo); }
+    .card--enemy .card__number { color: var(--color-accent-pink); }
 
     /* History panel */
-      .history-section {
-          margin-top: 24px;
-          background: var(--glass);
-          border: 1px solid var(--glass-border);
-          border-radius: 16px;
-          padding: 18px 20px;
-          backdrop-filter: blur(12px);
-      }
+    .history-section {
+      margin-top: 24px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 18px 20px;
+      backdrop-filter: blur(12px);
+      width: 100%;
+    }
 
-      .history-section .section-label {
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          color: var(--text-muted);
-          margin-bottom: 12px;
-      }
+    .history-section .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
 
-      .history-list {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-          max-height: 200px;
-          overflow-y: auto;
-      }
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
 
-      .history-list::-webkit-scrollbar {
-          width: 4px;
-      }
+    .history-list::-webkit-scrollbar { width: 4px; }
+    .history-list::-webkit-scrollbar-track { background: transparent; }
+    .history-list::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 4px; }
 
-      .history-list::-webkit-scrollbar-track {
-          background: transparent;
-      }
+    .history-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 14px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      font-size: 0.85rem;
+      animation: slideIn 0.3s ease-out;
+    }
 
-      .history-list::-webkit-scrollbar-thumb {
-          background: var(--glass-border);
-          border-radius: 4px;
-      }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-10px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
 
-      .history-item {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 8px 14px;
-          border-radius: 10px;
-          background: rgba(255, 255, 255, 0.02);
-          font-size: 0.85rem;
-          animation: slideIn 0.3s ease-out;
-      }
+    .history-item .eq {
+      font-family: monospace;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
 
-      @keyframes slideIn {
-          from {
-              opacity: 0;
-              transform: translateX(-10px);
-          }
+    .history-item .result-badge {
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-          to {
-              opacity: 1;
-              transform: translateX(0);
-          }
-      }
+    .history-item .result-badge.win { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
+    .history-item .result-badge.lose { background: rgba(239, 68, 68, 0.15); color: var(--accent-red); }
+    .history-item .result-badge.draw { background: rgba(250, 204, 21, 0.15); color: var(--accent-yellow); }
 
-      .history-item .eq {
-          font-family: 'JetBrains Mono', monospace;
-          color: var(--text-muted);
-          font-size: 0.8rem;
-      }
+    .empty-history {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 20px 0;
+      opacity: 0.6;
+    }
 
-      .history-item .result-badge {
-          padding: 2px 10px;
-          border-radius: 6px;
-          font-size: 0.7rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-      }
-
-      .history-item .result-badge.win {
-          background: rgba(34, 197, 94, 0.15);
-          color: var(--accent-green);
-      }
-
-      .history-item .result-badge.lose {
-          background: rgba(239, 68, 68, 0.15);
-          color: var(--accent-red);
-      }
-
-      .history-item .result-badge.draw {
-          background: rgba(250, 204, 21, 0.15);
-          color: var(--accent-yellow);
-      }
-
-      .empty-history {
-          text-align: center;
-          color: var(--text-muted);
-          font-size: 0.85rem;
-          padding: 20px 0;
-          opacity: 0.6;
-      }
     /* --- VS Badge --- */
     .arena__vs {
       font-size: var(--font-size-lg);
@@ -441,7 +402,7 @@
 
     /* --- Result Banner --- */
     .result {
-      min-height: 40px;
+      min-height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -459,19 +420,13 @@
       transition: opacity var(--transition-normal), transform var(--transition-normal);
     }
 
-    .result__text.is-visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .result__text--win  { color: var(--color-win);  border-color: rgba(34, 197, 94, 0.3);  }
-    .result__text--lose { color: var(--color-lose); border-color: rgba(239, 68, 68, 0.3);  }
+    .result__text.is-visible { opacity: 1; transform: scale(1); }
+    .result__text--win { color: var(--color-win); border-color: rgba(34, 197, 94, 0.3); }
+    .result__text--lose { color: var(--color-lose); border-color: rgba(239, 68, 68, 0.3); }
     .result__text--draw { color: var(--color-draw); border-color: rgba(245, 158, 11, 0.3); }
 
     /* --- Operation Buttons --- */
-    .ops {
-      text-align: center;
-    }
+    .ops { text-align: center; }
 
     .ops__title {
       font-size: var(--font-size-xs);
@@ -481,11 +436,7 @@
       margin-bottom: var(--space-md);
     }
 
-    .ops__grid {
-      display: flex;
-      gap: var(--space-md);
-      justify-content: center;
-    }
+    .ops__grid { display: flex; gap: var(--space-md); justify-content: center; }
 
     .ops__btn {
       width: 60px;
@@ -494,7 +445,6 @@
       border: 1px solid var(--color-border);
       background: var(--color-surface);
       backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
       color: var(--color-text-primary);
       font-size: var(--font-size-xl);
       font-weight: 700;
@@ -503,26 +453,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform var(--transition-normal),
-                  box-shadow var(--transition-normal),
-                  background var(--transition-normal);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
     }
 
-    .ops__btn:hover {
+    .ops__btn:hover:not(:disabled) {
       transform: scale(1.1);
       background: rgba(255, 255, 255, 0.08);
       box-shadow: var(--shadow-glow-indigo);
     }
 
-    .ops__btn:active {
-      transform: scale(0.95);
-    }
-
+    .ops__btn:active:not(:disabled) { transform: scale(0.95); }
+    
     .ops__btn:disabled {
-      opacity: 0.3;
+      opacity: 0.2;
       cursor: not-allowed;
       transform: none;
       box-shadow: none;
+      background: rgba(0,0,0,0.2);
     }
 
     /* --- Deal Button --- */
@@ -537,8 +484,7 @@
       font-family: var(--font-family);
       cursor: pointer;
       letter-spacing: 0.02em;
-      transition: transform var(--transition-normal),
-                  box-shadow var(--transition-normal);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     }
 
     .btn-deal:hover {
@@ -546,23 +492,73 @@
       box-shadow: 0 6px 24px rgba(99, 102, 241, 0.4);
     }
 
-    .btn-deal:active {
-      transform: translateY(0);
+    .btn-deal:active { transform: translateY(0); }
+
+    /* --- Modal Pop-up --- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
 
-    /* --- HR Divider --- */
-    hr {
+    .modal-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-box {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-2xl);
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      transform: translateY(-50px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.show .modal-box { transform: translateY(0); }
+
+    .modal-box h2 {
+      margin-bottom: var(--space-md);
+      color: var(--color-accent-indigo);
+    }
+
+    .modal-box p {
+      margin-bottom: var(--space-sm);
+      color: var(--color-text-muted);
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .modal-box .btn {
+      margin-top: var(--space-lg);
+      padding: var(--space-sm) var(--space-xl);
+      background: var(--color-accent-indigo);
+      color: white;
       border: none;
-      height: 1px;
-      width: 100%;
-      background: linear-gradient(to right, transparent, var(--color-border), transparent);
-      margin: var(--space-sm) 0;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform var(--transition-fast);
     }
 
-    /* --- Footer (Watermark) --- */
+    .modal-box .btn:hover { transform: scale(1.05); }
+
+    /* --- Footer --- */
     .game__footer {
       width: 100%;
-      margin-top: var(--space-xl);
+      margin-top: var(--space-md);
       padding-top: var(--space-md);
       border-top: 1px solid var(--color-border);
       font-size: var(--font-size-xs);
@@ -572,27 +568,9 @@
       opacity: 0.6;
     }
 
-    .game__footer p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .game__footer p::before,
-    .game__footer p::after {
-      content: "";
-      height: 1px;
-      flex: 1;
-      background: linear-gradient(to right, transparent, var(--color-border), transparent);
-    }
-
-    /* ============================================
-       ANIMATIONS — Card Flip
-       ============================================ */
     @keyframes card-pop {
-      0%   { transform: scale(0.9); opacity: 0.5; }
-      50%  { transform: scale(1.05); }
+      0% { transform: scale(0.9); opacity: 0.5; }
+      50% { transform: scale(1.05); }
       100% { transform: scale(1); opacity: 1; }
     }
 
@@ -604,73 +582,34 @@
        RESPONSIVE
        ============================================ */
     @media (max-width: 520px) {
-      .game__title {
-        font-size: var(--font-size-xl);
-      }
-
-      .arena {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-      }
-
-      .arena__vs {
-        width: 40px;
-        height: 40px;
-        font-size: var(--font-size-md);
-        margin: 0 auto;
-      }
-
-      .card {
-        padding: var(--space-lg) var(--space-md);
-      }
-
-      .card__number {
-        font-size: var(--font-size-2xl);
-      }
-
-      .ops__btn {
-        width: 52px;
-        height: 52px;
-      }
+      .game__title { font-size: var(--font-size-xl); }
+      .arena { grid-template-columns: 1fr; gap: var(--space-md); }
+      .arena__vs { width: 40px; height: 40px; font-size: var(--font-size-md); margin: 0 auto; }
+      .card { padding: var(--space-lg) var(--space-md); }
+      .card__number { font-size: var(--font-size-2xl); }
+      .ops__btn { width: 52px; height: 52px; }
     }
-
-    
   </style>
 </head>
+
 <body>
 
   <!-- ========== PARTICLE BACKGROUND ========== -->
   <div class="particles" aria-hidden="true">
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
-    <div class="particles__dot"></div>
+    <div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div>
+    <div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div>
+    <div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div>
+    <div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div><div class="particles__dot"></div>
   </div>
 
   <!-- ========== GAME UI ========== -->
   <main class="game">
-
     <!-- Header -->
     <header class="game__header">
       <h1 class="game__title">⚔️ Number Battle</h1>
       <p class="game__subtitle">Latihan Bilangan Bulat</p>
       <span class="badge">Tema: Bilangan Bulat</span>
+      <button class="btn-info" id="btnRules">ℹ️ Aturan</button>
     </header>
 
     <!-- Score Bar -->
@@ -720,6 +659,7 @@
         <button class="ops__btn" data-op="add" id="opAdd" disabled aria-label="Tambah">+</button>
         <button class="ops__btn" data-op="sub" id="opSub" disabled aria-label="Kurang">−</button>
         <button class="ops__btn" data-op="mul" id="opMul" disabled aria-label="Kali">×</button>
+        <button class="ops__btn" data-op="div" id="opDiv" disabled aria-label="Bagi">÷</button>
       </div>
     </section>
 
@@ -734,40 +674,51 @@
         <div class="empty-history">Belum Ada pertandingan. Tekan "Bagikan Kartu" untuk mulai. </div>
       </div>
     </div>
-      
-    
 
     <!-- Footer -->
     <footer class="game__footer">
       <p>Ujian Praktek Matematika &copy; Jmarco 2026</p>
     </footer>
-
   </main>
+
+  <!-- ========== MODAL ========== -->
+  <div class="modal-overlay" id="rulesModal">
+    <div class="modal-box">
+      <h2>Aturan Main</h2>
+      <p><strong>1.</strong> Klik <em>Bagikan Kartu</em> untuk mendapatkan angka acak bagi Pemain dan Lawan.</p>
+      <p><strong>2.</strong> Pilih salah satu <em>Operasi Matematika</em> (+, -, ×, ÷).</p>
+      <p><strong>3.</strong> Jika hasil <strong>&gt; 0</strong> Anda Menang, jika <strong>&lt; 0</strong> Anda Kalah, dan <strong>0</strong> berarti Seri.</p>
+      <button class="btn" id="btnCloseModal">Paham</button>
+    </div>
+  </div>
 
   <script>
     // ========== DOM REFERENCES ==========
     const $ = (id) => document.getElementById(id);
 
-    const playerNum   = $('playerNumber');
-    const enemyNum    = $('enemyNumber');
-    const playerCard  = $('playerCard');
-    const enemyCard   = $('enemyCard');
-    const btnDeal     = $('btnDeal');
-    const resultText  = $('resultText');
-    const roundCount  = $('roundCount');
-    const winCount    = $('winCount');
-    const loseCount   = $('loseCount');
-    const drawCount   = $('drawCount');
+    const playerNum = $('playerNumber');
+    const enemyNum = $('enemyNumber');
+    const playerCard = $('playerCard');
+    const enemyCard = $('enemyCard');
+    const btnDeal = $('btnDeal');
+    const resultText = $('resultText');
+    const roundCount = $('roundCount');
+    const winCount = $('winCount');
+    const loseCount = $('loseCount');
+    const drawCount = $('drawCount');
     const historyList = $('historyList');
-    const opsBtns     = document.querySelectorAll('.ops__btn');
+    const opsBtns = document.querySelectorAll('.ops__btn');
+    const btnRules = $('btnRules');
+    const rulesModal = $('rulesModal');
+    const btnCloseModal = $('btnCloseModal');
 
     // ========== GAME STATE ==========
     let playerCardValue = 0;
-    let enemyCardValue  = 0;
+    let enemyCardValue = 0;
     let rounds = 0;
-    let wins   = 0;
-    let loses  = 0;
-    let draws  = 0;
+    let wins = 0;
+    let loses = 0;
+    let draws = 0;
 
     // ========== HELPERS ==========
 
@@ -775,28 +726,34 @@
     const generateCard = () => Math.floor(Math.random() * 21) - 10;
 
     // Toggle semua tombol operasi
-    const setOpsEnabled = (enabled) =>
-      opsBtns.forEach((btn) => (btn.disabled = !enabled));
+    const setOpsEnabled = (enabled) => {
+      opsBtns.forEach((btn) => {
+        // Cegah pembagian dengan nol!
+        if (enabled && btn.dataset.op === 'div' && enemyCardValue === 0) {
+          btn.disabled = true;
+          return;
+        }
+        btn.disabled = !enabled;
+      });
+    };
 
     // Animasi pop pada kartu
     const animateCard = (card) => {
       card.classList.remove('is-dealing');
-      void card.offsetWidth;            // reflow
+      void card.offsetWidth; // Trigger reflow for animation restart
       card.classList.add('is-dealing');
     };
 
     // Tampilkan result banner
     const showResult = (message, type) => {
       resultText.textContent = message;
-      resultText.className   = 'result__text is-visible '
-        + (type === 'win'  ? 'result__text--win'
-         : type === 'lose' ? 'result__text--lose'
-         :                    'result__text--draw');
+      resultText.className = 'result__text is-visible ' + 
+        (type === 'win' ? 'result__text--win' : type === 'lose' ? 'result__text--lose' : 'result__text--draw');
     };
 
     // Tambah Riwayat
     const addHistory = (pVal, eVal, op, res, type) => {
-      // Hapus tulisan "Belum ada" jika ini pertandingan pertama
+      // Hapus status kosong
       if (rounds === 1 && historyList.querySelector('.empty-history')) {
         historyList.innerHTML = '';
       }
@@ -804,19 +761,23 @@
       const item = document.createElement('div');
       item.className = 'history-item';
       item.innerHTML = `
-        <span class="eq">${pVal} ${op} ${eVal} = ${res}</span>
+        <span class="eq">${pVal} ${op} ${eVal < 0 ? `(${eVal})` : eVal} = ${res}</span>
         <span class="result-badge ${type}">${type}</span>
       `;
       historyList.prepend(item);
     };
 
+    // ========== MODAL LOGIC ==========
+    btnRules.addEventListener('click', () => rulesModal.classList.add('show'));
+    btnCloseModal.addEventListener('click', () => rulesModal.classList.remove('show'));
+
     // ========== DEAL — Bagikan Kartu ==========
     btnDeal.addEventListener('click', () => {
       playerCardValue = generateCard();
-      enemyCardValue  = generateCard();
+      enemyCardValue = generateCard();
 
       playerNum.textContent = playerCardValue;
-      enemyNum.textContent  = enemyCardValue;
+      enemyNum.textContent = enemyCardValue;
 
       animateCard(playerCard);
       animateCard(enemyCard);
@@ -830,18 +791,21 @@
 
     // ========== HITUNG & CEK PEMENANG ==========
     const hitungHasil = (op) => {
-      const symbols = { add: '+', sub: '-', mul: '×' };
+      const symbols = { add: '+', sub: '-', mul: '×', div: '÷' };
       const symbol = symbols[op] || op;
       
-      const hasil = op === 'add' || op === '+' ? playerCardValue + enemyCardValue
-                  : op === 'sub' || op === '-' ? playerCardValue - enemyCardValue
-                  :                              playerCardValue * enemyCardValue;
+      let hasil = 0;
+      if (op === 'add') hasil = playerCardValue + enemyCardValue;
+      else if (op === 'sub') hasil = playerCardValue - enemyCardValue;
+      else if (op === 'mul') hasil = playerCardValue * enemyCardValue;
+      else if (op === 'div') {
+        hasil = parseFloat((playerCardValue / enemyCardValue).toFixed(2));
+      }
 
-      const [msg, type] = hasil > 0
-        ? [`Hasil: ${hasil} (Positif) — MENANG! 🏆`, 'win']
-        : hasil < 0
-          ? [`Hasil: ${hasil} (Negatif) — KALAH! 💀`, 'lose']
-          : [`Hasil: 0 — SERI! 🤝`, 'draw'];
+      const type = hasil > 0 ? 'win' : hasil < 0 ? 'lose' : 'draw';
+      const msg = type === 'win' ? `Hasil: ${hasil} (Positif) — MENANG! 🏆`
+                : type === 'lose' ? `Hasil: ${hasil} (Negatif) — KALAH! 💀`
+                : `Hasil: 0 — SERI! 🤝`;
 
       // Update counters
       if (type === 'win') winCount.textContent = ++wins;
@@ -854,12 +818,11 @@
     };
 
     // ========== EVENT LISTENERS — Tombol Operasi ==========
-    opsBtns.forEach((btn) =>
+    opsBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
         hitungHasil(btn.dataset.op);
-      })
-    );
+      });
+    });
   </script>
-
 </body>
 </html>
